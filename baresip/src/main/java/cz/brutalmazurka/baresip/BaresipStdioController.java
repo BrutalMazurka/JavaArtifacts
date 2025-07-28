@@ -71,7 +71,7 @@ public class BaresipStdioController {
                 
                 System.out.println("BARESIP OUT: " + severity + cleanLine);
                 processOutputLine(cleanLine, line);
-                responseQueue.offer(cleanLine); // For synchronous command responses
+                responseQueue.offer(cleanLine);     // For synchronous command responses
             }
         } catch (IOException e) {
             if (baresipProcess.isAlive()) {
